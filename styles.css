@@ -1,0 +1,102 @@
+:root{
+    --fade-black: rgba(0,0,0, 0.4);
+    --light-gray: #f5f5f5;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+body{
+    display:flex;
+}
+.main{
+    background-color: #16171d;
+    padding: 0 16% 0 16%;
+    display: flex;
+
+}
+
+
+.logo{
+    background-color: var(--fade-black);
+    width:100%;
+    display:flex;
+
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px 30px 0px;
+    margin-top: 40%;
+}
+
+.logo img{
+    width: 90%;
+    display:block;
+}
+
+.left-panel{
+    background-image: url(assets/background.jpg);
+    box-shadow: inset -50px 0px 100px rgba(0,0,0, 0.7);
+    box-shadow: -1px 0px 70px  rgba(255, 255, 255, 0.1);
+    flex:1;
+    height:100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.pun{
+    margin-bottom: 0.5rem;
+}
+.footer{
+    color: white;
+    text-align: center;
+    font-size: 0.75rem;
+    background-color: var(--fade-black);
+    width: 100%;
+}
+.footer a{
+    color: white;
+}
+.right-panel{
+    flex:2;
+    box-shadow: 1px 0px 70px  rgba(255, 255, 255, 0.1);
+
+}
+
+.right-top{
+    background-color: var(--light-gray);
+    display:flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.right-paragraph, .italics{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.right-paragraph, .form-title{
+    padding: 0 2rem 0 2rem;
+}
+.right-paragraph:first-child{
+    margin-top: 6rem;
+}
+.right-paragraph:last-child{
+    margin-bottom: 2rem;
+}
+.italics{
+    font-style: italic;
+}
+.right-middle{
+    background-color: white;
+    box-shadow:  1px 0px 3px rgba(0,0,0, 0.1);
+}
+.form-title{
+    padding-top: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+
+}
