@@ -1,6 +1,7 @@
 :root{
     --fade-black: rgba(0,0,0, 0.4);
     --light-gray: #f5f5f5;
+    --dark-gray: #393939;
     --blue: #6497b1;
     --dark-blue:#005b96;
 }
@@ -93,7 +94,7 @@ body{
 }
 
 /* General right side padding */
-.right-paragraph, .form-title, .form-container, .bottom-container{
+.right-paragraph, .form-title, .form-container, .bottom-container, .required{
     padding: 0 2rem 0 2rem;
 }
 .right-paragraph:first-child{
@@ -119,11 +120,12 @@ body{
 
 }
 
-.form-container{
+.form-element{
     display:grid;
     grid-template-areas: 'first-name last-name'
     'email tel'
-    'password confirm-password';
+    'password confirm-password'
+    'required required';
     margin-top: 1rem;
     
 }
@@ -139,10 +141,25 @@ body{
     margin-top: 0.1rem;
     margin-bottom: 0.5rem;
     padding: 0.12rem;
+    padding-left: 0.5rem;
     width: 75%;
     height: 1.5rem;
+    border: solid 1px var(--dark-gray); 
+    border-radius: 4px;
 }
+.form-container input:focus{
+    border: solid 1px var(--blue);
+    outline: solid 1px var(--blue);
+    position:relative;
+    bottom: 1px;
+    right: 2px;
+    box-shadow: 0.188rem 0.188rem 0.3rem rgba(0,0,0, 0.1);
+} 
 
+.required{
+    margin-top: 0.5rem;
+    font-size: 0.72rem;;
+}
 .right-bottom{
     background-color: var(--light-gray);
     height:auto;
@@ -154,7 +171,6 @@ body{
     padding-top: 2rem;
 }
 .submit-button{
-
     background-color: #6497b1;
     padding:0.5rem 2rem 0.5rem 2rem; 
     color:white;
@@ -170,7 +186,6 @@ body{
 .submit-button:focus, .submit-button:hover{
     position:relative;
     bottom:1px;
-
 }
 
 .login{
@@ -187,3 +202,10 @@ body{
     font-weight: 800;
     text-decoration: none;
 }
+
+
+#email:invalid, #tel:invalid, #password:invalid, #conf-password:invalid{
+    border-color: red;
+    outline: red;
+}
+
